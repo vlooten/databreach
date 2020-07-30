@@ -16,6 +16,8 @@ rm(pack)
 
 # Import data and data management ####
 breach <- read.csv2("https://www.data.gouv.fr/fr/datasets/r/4c176588-a444-4dc7-b6bf-60390ae7e5be", stringsAsFactors = FALSE)
+# OR
+# breach <- readRDS("breachdata.rds")
 breach <- breach[,colSums(is.na(breach))<nrow(breach)]
 # Definitions of outcomes
 # Year: 2018, 2019
